@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   serverDisplayPID.c                                 :+:      :+:    :+:   */
+/*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 15:37:12 by aleger            #+#    #+#             */
-/*   Updated: 2022/04/11 16:54:40 by aleger           ###   ########.fr       */
+/*   Created: 2022/04/11 16:53:49 by aleger            #+#    #+#             */
+/*   Updated: 2022/04/17 16:09:05 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "server.h"
-#include "libft.h"
-#include <unistd.h>
-#include <stdlib.h>
+#include "minitalk.h"
 
-void	display_pid(void)
+int	main(int argc, char *argv[])
 {
-	pid_t	pid;
-	char	*str_pid;
+	struct s_args	args;
 
-	pid = getpid();
-	str_pid = ft_itoa(pid);
-	if (!str_pid)
-	{
-		ft_putendl_fd("Error at ft_itoa()", 2);
-		return ;
-	}
-	ft_putendl_fd(str_pid, 1);
-	free(str_pid);
+	if (!parse_args)
 }
